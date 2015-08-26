@@ -4,17 +4,17 @@ angular.module("hackerNewsApp", [])
 
     var vm = this;
     var articlesToShow = [];
-    var currentStorie = '';
+    var currentStory = '';
     vm.stories = [];
 
     vm.viewMoreItems = function(){
-        NewsService.getStories(currentStorie).then(function(response){
+        NewsService.getStories(currentStory).then(function(response){
            publishTenMoreStories(response.data, true);
         });
     }
 
     vm.getStories = function(typeOfStories){
-        currentStorie = typeOfStories;
+        currentStory = typeOfStories;
         NewsService.getStories(typeOfStories).then(function(response){
             publishTenMoreStories(response.data);
         });
@@ -41,7 +41,7 @@ angular.module("hackerNewsApp", [])
         }
 
         angular.forEach(articlesToShow, function(id){
-            NewsService.getStorie(id).then(function(response){
+            NewsService.getStory(id).then(function(response){
                 vm.stories.push(response.data);
             });
         });
@@ -49,8 +49,8 @@ angular.module("hackerNewsApp", [])
 
     function isNew(id){
       var answer = true;
-      angular.forEach(vm.stories, function(storie){
-        if(storie.id === id) answer = false;
+      angular.forEach(vm.stories, function(story){
+        if(story.id === id) answer = false;
       });
       return answer;
     }
