@@ -1,3 +1,3 @@
 # HackerNews
-A mobile version of awesome Hacker News
+A responsive and mobile friendly version of the awesome Hacker News (http://news.ycombinator.com)
 
