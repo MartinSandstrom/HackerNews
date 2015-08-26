@@ -42,6 +42,10 @@ angular.module("hackerNewsApp", [])
 
         angular.forEach(articlesToShow, function(id){
             NewsService.getStory(id).then(function(response){
+              if(!response.data.url || response.data.url === ''){
+                response.data.url = 'https://news.ycombinator.com/item?id=' + response.data.id;
+              }
+              console.log(response.data);
                 vm.stories.push(response.data);
             });
         });
@@ -56,6 +60,7 @@ angular.module("hackerNewsApp", [])
     }
 
 })
+
 .filter('datediff', function(){
   return function(date) {
 
