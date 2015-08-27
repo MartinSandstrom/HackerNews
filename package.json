@@ -11,13 +11,5 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-gh-pages": "^0.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OakNinja/HackerNews.git"
-  },
-  "bugs": {
-    "url": "https://github.com/OakNinja/HackerNews/issues"
-  },
-  "homepage": "https://github.com/OakNinja/HackerNews#readme"
+  }
 }
