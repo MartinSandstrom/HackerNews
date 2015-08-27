@@ -45,7 +45,6 @@ angular.module("hackerNewsApp", [])
               if(!response.data.url || response.data.url === ''){
                 response.data.url = 'https://news.ycombinator.com/item?id=' + response.data.id;
               }
-              console.log(response.data);
                 vm.stories.push(response.data);
             });
         });
