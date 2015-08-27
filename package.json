@@ -1,15 +1,23 @@
 {
-  "name": "HackerNews",
-  "version": "1.0.0",
-  "description": "",
+  "name": "hackernews",
+  "version": "0.0.1",
+  "description": "A responsive and mobile friendly version of the awesome Hacker News (http://news.ycombinator.com)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-gh-pages": "^0.5.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OakNinja/HackerNews.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OakNinja/HackerNews/issues"
+  },
+  "homepage": "https://github.com/OakNinja/HackerNews#readme"
 }
