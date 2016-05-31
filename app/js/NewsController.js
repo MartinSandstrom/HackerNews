@@ -11,14 +11,14 @@ angular.module("hackerNewsApp", [])
         NewsService.getStories(currentStory).then(function(response){
            publishTenMoreStories(response.data, true);
         });
-    }
+    };
 
     vm.getStories = function(typeOfStories){
         currentStory = typeOfStories;
         NewsService.getStories(typeOfStories).then(function(response){
             publishTenMoreStories(response.data);
         });
-    }
+    };
 
     vm.getStories();
 
@@ -29,7 +29,7 @@ angular.module("hackerNewsApp", [])
           var index = 0;
           while (number < 10) {
             if(isNew(stories[index])){
-              articlesToShow.push(stories[index])
+              articlesToShow.push(stories[index]);
               number++;
             }
             index++;
@@ -84,5 +84,5 @@ angular.module("hackerNewsApp", [])
       }
       interval = Math.floor(seconds / 60);
       return interval + " minutes ago";
-}
+  };
 });
