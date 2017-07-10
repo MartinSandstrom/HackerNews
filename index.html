@@ -36,10 +36,10 @@
             </nav>
             <div class="stories" ng-repeat="(key, story) in vm.stories">
                 <div>
-                    <span class="title">{{ key + 1 }}. <a href='{{ story.url}}'>{{ story.title }}</a></span>
+                    <span class="title">{{ key + 1 }}. <a href='{{story.url}}'>{{ story.title }}</a></span>
                     <p>{{ story.score }} point
                         <span ng-if="story.score != 1">s</span> by <strong>
-                            <a href="https://news.ycombinator.com/user?id={{story.by}}">{{ story.by }}</a>
+                            <a href="https://news.ycombinator.com/user?id={{story.by}}" target="_blank">{{ story.by }}</a>
                             </strong> {{ story.time * 1000 | datediff }} </p>
                 </div>
             </div>
@@ -48,10 +48,10 @@
             </div>
         </div>
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="js/bootstrapOverride.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular/angular.min.js"></script>
         <script src="js/NewsController.js"></script>
         <script src="js/NewsService.js"></script>
     </body>
